@@ -1,11 +1,10 @@
 ## 这一份复习资料整理的我觉得还蛮全面的 可以看看
 
-<iframe 
-    src="https://github.com/lfp1111/flip-/blob/master/docs/xc/121.pdf" 
-    width="100%" 
-    height="600px" 
-    frameborder="0"
-></iframe>
+<a href="https://github.com/lfp1111/flip-/blob/master/docs/xc/121.pdf" target="_blank">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        查看 PDF 文件
+    </button>
+</a>
 
 
 
