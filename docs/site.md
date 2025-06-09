@@ -1,7 +1,17 @@
-## 一些好用的网站记录
-zlib：https://intl.su/
-AI：https://share.xuzhugpt.cloud/list  邀请码是 chatgpt4o-mini-xuzhu
-md语法：https://www.zjuhjy.top/%E5%A6%99%E5%A6%99%E5%B7%A5%E5%85%B7/post6
-## 一些老师的网页：
-咸鱼暄老师的网页：https://xuan-insr.github.io/
-savia学长的网页：https://savia7582.github.io/Exterior/
+
+
+```python
+class EnhancedCNN(nn.Module):
+    def __init__(self):
+        super(EnhancedCNN, self).__init__()
+        self.conv1 = nn.Conv2d(3, 16, kernel_size=3, padding=1)
+        self.conv2 = nn.Conv2d(16, 32, kernel_size=3, padding=1)
+        # 在这里添加一个新的卷积层、BatchNorm和相应的池化层
+        self.pool = nn.MaxPool2d(2, 2)
+        self.flatten = nn.Flatten()
+        # 修改全连接层以适应新的特征图尺寸
+        self.relu = nn.ReLU()
+    def forward(self, x):
+        # 实现包含新卷积层的前向传播
+        return x
+```

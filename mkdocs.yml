@@ -3,7 +3,7 @@ site_name: flip的小站
 nav:
   - 主页: index.md
   - 关于: about.md
-  - 网址: site。md
+  - 网址: site.md
   
 theme: 
     name: material
