@@ -5,6 +5,6 @@ nav:
   - 我: about.md
   - 好用的网址: site.md
   - 学习:
-    - 形策复习：xc.md
+    - 形策复习: xc.md
 theme: 
     name: material
