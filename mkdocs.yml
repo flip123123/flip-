@@ -2,8 +2,9 @@ site_name: flip的小站
 
 nav:
   - 主页: index.md
-  - 关于: about.md
-  - 网址: site.md
-  
+  - 我: about.md
+  - 好用的网址: site.md
+  - 学习:
+    - 形策复习：xc.md
 theme: 
     name: material
