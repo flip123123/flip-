@@ -1,7 +1,7 @@
 ## 这一份复习资料整理的我觉得还蛮全面的 可以看看
 
 <iframe 
-    src="https://github.com/lfp1111/flip-/blob/master/docs/xc/121.pdf" 
+    src="https://github.com/lfp1111/flip-/blob/master/flip-/docs/xc/121.pdf" 
     width="100%" 
     height="600px" 
     frameborder="0"
