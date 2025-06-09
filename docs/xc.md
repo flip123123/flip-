@@ -1,11 +1,10 @@
 ## 这一份复习资料整理的我觉得还蛮全面的 可以看看
 
-<embed 
-    src="[PDF 的在线路径](https://raw.githubusercontent.com/lfp1111/flip-/master/docs/xc/121.pdf)" 
-    type="application/pdf" 
-    width="100%" 
-    height="600px" 
-/>
+<iframe 
+  src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/lfp1111/flip-/master/docs/xc/121.pdf&embedded=true" 
+  width="100%" 
+  height="600px"
+></iframe>
 
 
 
