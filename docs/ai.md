@@ -6,7 +6,7 @@
 
 作业要求如图：
 
-![作业](docs/ai/pic.png)
+![作业](https://raw.githubusercontent.com/lfp1111/flip-/master/docs/ai/pic.png)
 
 因为训练样本很少（一共75张照片，你还要分训练集和验证集，我是二八分，所以样本就60），我最后训练出来的模型最后只有70左右的正确率
 
