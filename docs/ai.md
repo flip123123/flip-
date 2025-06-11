@@ -4,7 +4,7 @@
 
 基本lab都可以用ai完成，代码也是只是跑的时间比较久，并没有思考上的难度。这里放一下我的大作业好了：
 
-作业要求在[文件夹](https://github.com/lfp1111/flip-/tree/master/docs/ai)中的pic,png中
+作业要求在[文件夹](https://github.com/flip123123/flip-/tree/master/docs/ai)中的pic,png中
 
 里面有我的模型代码和我的展示ppt（对 做完了大家都要上去展示的），然后要运行的话，要自己配一下环境，代码里的路径也要自己修改一下。
 
