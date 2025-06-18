@@ -24,7 +24,7 @@ theme:
       - navigation.sections
     palette:
       scheme: slate
-      原色: indigo
+      原色: yellow
 
 markdown_extensions:
   - pymdownx.highlight:
