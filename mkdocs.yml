@@ -17,15 +17,14 @@ nav:
     - 是非正缘: word5.md
 theme: 
     name: material
-    theme:
-      features:
-        - navigation.instant
-        - navigation.tabs
-        - navigation.tabs.sticky
-        - navigation.sections
-      palette:
-        scheme: slate
-        原色: indigo
+    features:
+      - navigation.instant
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - navigation.sections
+    palette:
+      scheme: slate
+      原色: indigo
 
 markdown_extensions:
   - pymdownx.highlight:
