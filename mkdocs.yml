@@ -8,6 +8,7 @@ nav:
     - 形策复习: xc.md
     - 人工智能: ai.md
     - md语法: md.md
+    - html语法: html.md
   - 一些talks:
     - 乱七八糟: word1.md
     - 工高被刷: word2.md
@@ -16,3 +17,19 @@ nav:
     - 是非正缘: word5.md
 theme: 
     name: material
+    theme:
+      features:
+        - navigation.instant
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - navigation.sections
+      palette:
+        scheme: slate
+        原色: indigo
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
