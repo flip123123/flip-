@@ -8,7 +8,12 @@ nav:
     - 形策复习: xc.md
     - 人工智能: ai.md
     - md语法: md.md
-    - html语法: html.md
+    - html语法: 
+      - 6.16: html1.md
+      - 6.17: html2.md
+      - 6.18: html3.md
+      
+
   - 一些talks:
     - 乱七八糟: word1.md
     - 工高被刷: word2.md
