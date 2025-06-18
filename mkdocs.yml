@@ -24,7 +24,7 @@ theme:
       - navigation.sections
     palette:
       scheme: slate
-      原色: purple
+      primary: purple
 
 markdown_extensions:
   - pymdownx.highlight:
