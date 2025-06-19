@@ -13,3 +13,7 @@
 [AskManyAI](https://askmany.cn/index)
 
 
+[思政刷题器](https://study.zjueva.net/)  
+[大英默写器](https://eng.zjueva.net/)
+
+[有趣的开源社区 - HelloGitHub](https://hellogithub.com/)
