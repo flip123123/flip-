@@ -1,9 +1,12 @@
 这一份复习资料整理的我觉得还蛮全面的 可以看看
 
 
-
-<iframe src="https://raw.githubusercontent.com/flip123123/flip-/master/docs/js/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/flip123123/flip-/master/xc/121.pdf" width="100%" height="600px"
-style="border: none;"></iframe>
+<iframe
+    src="/docs/js/pdfjs/viewer.html?file=/docs/xc/121.pdf"
+    width="100%"
+    height="600px"
+    style="border: none;">
+</iframe>
 
 
 
