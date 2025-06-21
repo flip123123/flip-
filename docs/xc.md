@@ -1,13 +1,4 @@
-这一份复习资料整理的我觉得还蛮全面的 可以看看
-
-
-<iframe
-    src="/docs/js/pdfjs/viewer.html?file=/docs/xc/121.pdf"
-    width="100%"
-    height="600px"
-    style="border: none;">
-</iframe>
-
+这一份[复习资料](https://github.com/flip123123/flip-/blob/master/docs/xc)整理的我觉得还蛮全面的 可以看看
 
 
 再指路一个贴：
