@@ -11,13 +11,17 @@
 ## HTML 链接 
 
 是通过 `<a></a>` 标签来定义的，比如：  
-`<a href="https://www.runoob.com">这是一个链接</a>`  
+```html
+<a href="https://www.runoob.com">这是一个链接</a>
+```  
 呈现结果为：<a href="https://www.runoob.com">这是一个链接</a>
 
 ## HTML 图像
 
 是通过 `<img>` 标签来定义的，比如：  
-`<img src="/images/logo.png" width="258" height="39" />`  
+```html
+<img src="/images/logo.png" width="258" height="39" />
+```  
 注意图片的格式并不和其他几类一样对称
 
 ## HTML 元素
@@ -33,16 +37,17 @@
 
 ### HTML 文档实例
 
-`<!DOCTYPE html>  `  
-`<html>` 
+```html
+<!DOCTYPE html>  
+<html>
 
-`<body>  
-`<p>这是第一个段落。</p> `  
-`</body> `
+<body>  
+<p>这是第一个段落。</p> 
+</body> 
 
-`</html>`
-
-`<body>` 元素定义了 HTML 文档的主体  
+</html>
+```
+`<body>`元素定义了 HTML 文档的主体  
 `<html>` 元素定义了整个 HTML 文档  
 **不要忘记结束标签**
 

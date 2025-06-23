@@ -5,7 +5,10 @@
 - 属性一般描述于**开始标签**
 - 属性总是以名称/值对的形式出现，**比如：name="value"**
 
-比如： `<a href="http://www.runoob.com">这是一个链接</a>`  
+比如： 
+```html
+<a href="http://www.runoob.com">这是一个链接</a>
+``` 
 链接的地址在 herf 属性中定义
 
 属性的定义，单引号双引号都可以，但是当属性值中本身有双引号时，你必须得使用单引号
@@ -19,8 +22,7 @@
 
 ## HTML 注释
 
-注释写法为  
-`<!--这是一个注释-->`  
+注释写法为  : `<!--这是一个注释-->`  
 其中左括号和感叹号是不可少的，但最好也把破折号和结束括号给加上
 
 ## HTML 提示
@@ -47,19 +49,23 @@ HTML 的输出页面无法通过在代码中加空格或空行来改变，所有
 `<a href="URL">链接文本</a>`
 
 示例：  
-`<a href="/index.html">本文本</a> 是一个指向本网站中的一个页面的链接。</p>`  
-`<p><a href="https://www.microsoft.com/">本文本</a> 是一个指向万维网上的页面的链接。</p>`
+```html
+<a href="/index.html">本文本</a> 是一个指向本网站中的一个页面的链接。</p>
+<p><a href="https://www.microsoft.com/">本文本</a> 是一个指向万维网上的页面的链接。</p>
+```
 
 最后呈现的结果是，本文本三个字是可点击跳转的链接，后面跟随着链接文本
 
 ### 链接属性
 
 示例：  
-`<a href="https://www.example.com" target="_blank" rel="noopener">新窗口打开 Example</a>`
+```html
+<a href="https://www.example.com" target="_blank" rel="noopener">新窗口打开 Example</a>
+```
 
 1. href：定义链接目标
 2. target：定义链接的打开方式
-	1. - `_blank`: 在新窗口或新标签页中打开链接
+	1. `_blank`: 在新窗口或新标签页中打开链接
 	2. `_self`: 在当前窗口或标签页中打开链接（默认）
 	3. `_parent`: 在父框架中打开链接
 	4. `_top`: 在整个窗口中打开链接，取消任何框架
