@@ -14,6 +14,10 @@ nav:
       - 6.18: html3.md
       - 6.22: html4.md
       - 6.23: html5.md
+    - makefile: makefile.md
+    - css:
+      - 6.25: css1.md
+      - 6.26: css2.md
 
   - 一些talks:
     - 乱七八糟: word1.md
