@@ -1,0 +1,67 @@
+.remark-container {
+    position: relative;        /* 关键：使内部的tooltip可以相对于它定位 */
+    display: inline-block;     /* 关键：只占据内容所需的宽度，而不是整行 */
+    /* text-decoration: underline; */ /* 你可以选择使用实心下划线 */
+    border-bottom: 1px dotted #007bff; /* 或使用虚线，更像备注 */
+    color: #007bff;            /* 备注文字颜色，使其显眼 */
+    cursor: help;              /* 鼠标悬停时显示帮助手势 */
+    z-index: 1; /* 确保原始文字在tooltip上方，以免被tooltip遮挡点击 */
+}
+
+/* 备注提示框的样式 */
+.remark-tooltip {
+    visibility: hidden; /* 默认隐藏（用于过渡效果） */
+    opacity: 0;         /* 默认透明（用于过渡效果） */
+    position: absolute; /* 关键：脱离文档流，自由定位 */
+    bottom: 125%;       /* 将提示框定位在文字上方，调整这个值可以控制距离 */
+    left: 50%;          /* 从父元素的50%处开始 */
+    transform: translateX(-50%); /* 关键：向左移动自身宽度的一半，实现水平居中 */
+
+    background-color: #333; /* 提示框背景色 */
+    color: #fff;         /* 提示框文字颜色 */
+    padding: 10px 15px;  /* 稍微增加内边距，让内容更舒适 */
+    border-radius: 6px;  /* 圆角 */
+    white-space: normal; /* 允许文本换行 */
+
+    /* ******** 这里是修改点 ******** */
+    max-width: 1200px;    /* 增大提示框的最大宽度，例如 450px */
+    font-size: 14px;     /* 缩小内部字体大小，例如 14px (默认通常是 16px) */
+    line-height: 1.5;    /* 增加行高，提高小字体的可读性 */
+    text-align: left;    /* 将文本对齐方式改为左对齐，更适合长文本阅读 */
+    /* ***************************** */
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 阴影效果 */
+    z-index: 100;        /* 确保提示框在其他内容之上 */
+
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* 过渡效果 */
+
+    /* 针对 sup.remark-tooltip 的重置样式 (保持不变) */
+    vertical-align: baseline;
+    font-weight: normal;
+    text-transform: none;
+    letter-spacing: normal;
+}
+/* 提示框的小箭头 (保持不变) */
+.remark-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* 定位在提示框的底部 */
+    left: 50%; /* 居中 */
+    transform: translateX(-50%);
+    border-width: 8px; /* 箭头大小 */
+    border-style: solid;
+    border-color: #333 transparent transparent transparent; /* 创建一个指向下方的三角形 */
+}
+
+
+/* 鼠标悬停时显示备注 (保持不变) */
+.remark-container:hover .remark-tooltip {
+    visibility: visible; /* 显示 */
+    opacity: 1;          /* 完全显示 */
+}
+
+/* 针对链接的样式调整 (保持不变) */
+a.remark-container {
+    text-decoration: none; /* 移除链接默认下划线，因为我们用了border-bottom */
+    color: inherit; /* 让链接颜色继承父元素，或者设置你喜欢的颜色 */
+}
