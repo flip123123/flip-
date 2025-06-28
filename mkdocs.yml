@@ -2,7 +2,6 @@ site_name: flip的小站
 
 nav:
   - 主页: index.md
-  - 我: about.md
   - 好用的网址: site.md
   - 学习:
     - 形策复习: xc.md
@@ -28,10 +27,18 @@ nav:
 theme: 
     name: material
     features:
-      - navigation.instant
-      - navigation.tabs
-      - navigation.tabs.sticky
-      - navigation.sections
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
     palette:
       scheme: slate
       primary: purple
@@ -42,6 +49,12 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - def_list
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
