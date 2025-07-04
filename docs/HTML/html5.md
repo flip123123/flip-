@@ -42,14 +42,14 @@ HTML 表格是一种用于展示结构化数据的标记语言元素。
 -  **&lt;tbody**  **&gt;**  **用于定义表格的主体部分:**  在 \<tbody \> 中，使用 \<tr \> 元素定义行，并在每行中使用 \<td \> 元素定义单元格数据，以上实例中有两行数据，每行包含三个单元格。
 
 
-![image](HTML/1.png)
+![image](1.png)
 
 
 ### HTML表格边框
 
 就是调一下border的数量，我个人觉得调3比较好看
 
-![image](HTML/2.png)
+![image](2.png)
 
 ### HTML表格表头
 
@@ -57,7 +57,7 @@ HTML 表格是一种用于展示结构化数据的标记语言元素。
 
 大多数浏览器会把表头显示为粗体居中的文本
 
-![image](HTML/3.png)
+![image](3.png)
 
 
 ## HTML列表
@@ -208,7 +208,7 @@ JavaScript</div>
 </html>
 ```
 
-![image](HTML/4.png)
+![image](4.png)
 
 ### \<table\>元素
 
@@ -253,7 +253,7 @@ JavaScript
 </html>
 ```
 
-![image](HTML/5.png)
+![image](5.png)
 
 ### 一些提示
 
@@ -318,7 +318,7 @@ HTML 表单通常包含各种输入字段、复选框、单选按钮、下拉列
 
 实现效果如图：
 
-![image](HTML/6.png)
+![image](6.png)
 
 其中：
 
@@ -364,7 +364,7 @@ Last name: <input type="text" name="lastname">
 
 浏览器显示如下：
 
-![image](HTML/7.png)
+![image](7.png)
 
 **注意:** 表单本身并不可见。同时，在大多数浏览器中，文本域的默认宽度是 20 个字符
 
@@ -381,7 +381,7 @@ Last name: <input type="text" name="lastname">
 
 浏览器显示效果如下:
 
-![image](HTML/8.png)
+![image](8.png)
 
 #### 复选框（Checkboxes）
 
@@ -398,7 +398,7 @@ Last name: <input type="text" name="lastname">
 
 浏览器显示效果如下:
 
-![image](HTML/9.png)
+![image](9.png)
 
 #### 提交按钮(Submit)
 
@@ -417,7 +417,7 @@ Username: <input type="text" name="user">
 
 浏览器显示效果如下:
 
-![image](HTML/10.png)
+![image](10.png)
 
 假如您在上面的文本框内键入几个字母，然后点击确认按钮，那么输入数据会传送到 **html_form_action.php** 文件，该页面将显示出输入的结果。
 

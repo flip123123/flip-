@@ -62,7 +62,7 @@ background-image:url('gradient2.png');
 
 呈现结果为：
 
-![image](css/1.png)
+![image](1.png)
 
 但如果图像只在水平方向平铺 (repeat-x), 页面背景会更好些:
 
@@ -76,7 +76,7 @@ background-repeat:repeat-x;
 
 呈现结果为：
 
-![image](css/2.png)
+![image](2.png)
 
 
 #### 设置定位与不平铺
@@ -95,7 +95,7 @@ background-repeat:no-repeat;
 
 呈现结果如下：
 
-![image](css/3.png)
+![image](3.png)
 
 以上实例中，背景图像与文本显示在同一个位置，为了让页面排版更加合理，不影响文本的阅读，我们可以改变图像的位置。
 
@@ -112,7 +112,7 @@ background-position:right top;
 
 呈现结果如下：
 
-![image](css/4.png)
+![image](4.png)
 
 #### 简写属性
 
@@ -182,7 +182,7 @@ h3 {text-decoration:underline;}
 
 呈现效果如下：
 
-![image](css/5.png)
+![image](5.png)
 
 
 ### 文本转换
@@ -199,7 +199,7 @@ p.capitalize {text-transform:capitalize;}
 
 对应结果如下：全大写/全小写/首字母大写
 
-![image](css/6.png)
+![image](6.png)
 
 ### 文本缩进
 
@@ -388,4 +388,4 @@ a:active {background-color:#FF704D;}
 
 呈现效果为：
 
-![image](css/7.png)
+![image](7.png)
