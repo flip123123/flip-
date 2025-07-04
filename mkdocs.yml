@@ -4,9 +4,9 @@ nav:
   - 主页: index.md
   - 好用的网址: site.md
   - 学习:
-    - 形策复习: xc.md
-    - 人工智能: ai/ai.md
-    - md语法: md.md
+    - 形策一: xc.md
+    - 人工智能基础A: ai/ai.md
+    - markdown: md.md
     - html语法: 
       - 6.16: HTML/html1.md
       - 6.17: HTML/html2.md
