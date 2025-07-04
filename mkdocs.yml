@@ -5,25 +5,28 @@ nav:
   - 好用的网址: site.md
   - 学习:
     - 形策复习: xc.md
-    - 人工智能: ai.md
+    - 人工智能: ai/ai.md
     - md语法: md.md
     - html语法: 
-      - 6.16: html1.md
-      - 6.17: html2.md
-      - 6.18: html3.md
-      - 6.22: html4.md
-      - 6.23: html5.md
+      - 6.16: HTML/html1.md
+      - 6.17: HTML/html2.md
+      - 6.18: HTML/html3.md
+      - 6.22: HTML/html4.md
+      - 6.23: HTML/html5.md
     - makefile: makefile.md
     - css:
-      - 6.25: css1.md
-      - 6.26: css2.md
-
+      - 6.25: css/css1.md
+      - 6.26: css/css2.md
+      - 6.27: css/css3.md
+      - 7.1: css/css4.md
+      - 7.3: css/css5.md
+      - 7.4: css/css6.md
   - 一些talks:
-    - 乱七八糟: word1.md
-    - 工高被刷: word2.md
-    - 和gsy老师: word3.md
-    - 社团中心: word4.md
-    - 是非正缘: word5.md
+    - 乱七八糟: words/word1.md
+    - 工高被刷: words/word2.md
+    - 和gsy老师: words/word3.md
+    - 社团中心: words/word4.md
+    - 是非正缘: words/word5.md
 theme: 
     name: material
     features:
