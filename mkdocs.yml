@@ -65,4 +65,5 @@ extra_css:
 
 plugins:
   - statistics
+  - md_in_html
   
