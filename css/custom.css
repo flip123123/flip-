@@ -1,148 +1,164 @@
 /* docs/css/extra.css */
 
 /* --- CSS 变量定义 --- */
+/* 这些变量将允许我们方便地改变主题的整体色调 */
 :root {
     /* 默认的浅色模式颜色 */
     --background-color-light: #f4f7f6;
     --text-color-light: #333;
-    --link-color-light: #007bff;
+    --link-color-light: #007bff; /* 浅色模式下链接的默认颜色 */
 
     /* 默认的深色模式颜色 */
     --background-color-dark: #2c3e50;
     --text-color-dark: #ecf0f1;
-    --link-color-dark: #03a9f4;
+    --link-color-dark: #03a9f4; /* 深色模式下链接的默认颜色 */
 
-    /* 默认的主色调 */
-    --primary-accent-color: #3498db;
+    /* 默认的主色调（用于 Material 主题的 accent color） */
+    --primary-accent-color: #3498db; /* Material 主题会根据 data-md-color-primary 重写这个 */
 }
 
-/* --- Material for MkDocs 主题的全局覆盖 (仅影响主内容区) --- */
+/* --- Material for MkDocs 主题的全局覆盖 --- */
+/*
+   Material for MkDocs 会自动根据 body 的 data-md-color-scheme 和 data-md-color-primary
+   来应用样式。我们的 CSS 变量会作为 Material 主题的 fallback 或自定义选项。
+   这里我们移除对 .md-sidebar 的强制覆盖，让 Material 主题的默认逻辑生效。
+*/
 
-/* 限制主色调设置到 .md-content 或 body 的特定部分，而不是全局 body */
-/* Material for MkDocs 已经为许多颜色方案提供了内置的 data-md-color-primary 属性映射 */
-/* 如果你需要为 'blue', 'green' 等添加自定义主色，可以保留以下，但要确保它们不会影响侧边栏 */
-/* 通常 Material 主题在 body 上直接处理颜色，如果它响应了 body[data-md-color-primary]，侧边栏也会跟着变 */
-/* 为了不影响侧边栏，我们需要确保你的 CSS *不*直接修改 body 的颜色 */
+/* 当 body 的 data-md-color-scheme 改变时，Material 主题会应用相应的全局样式 */
+/* 我们的 CSS 变量可以在此基础上进行微调或提供默认值 */
 
-/* --- 主体模式样式 (仅影响主内容区) --- */
+/* 默认颜色配置 (当没有明确设置或 fallback 时使用) */
+/* Material 主题通常会提供其默认的颜色变量，例如： */
+/* --md-primary-bg-color: #ffffff; */
+/* --md-primary-fg-color: #333; */
+/* --md-accent-fg-color: #007bff; */
+/* ... 等等 */
 
-/* 避免直接修改 body 的 background 和 color，而是找主内容区域的容器 */
-/* Material for MkDocs 的主内容区域通常在 .md-content 类中 */
-/* 如果你想要全局的日夜间切换效果，但又不想影响侧边栏 */
-/* 这将比较棘手，因为主题的设计是整体响应的。 */
-
-/* **最简单的办法是：** 你的 JS 是在 `body` 上设置 `data-md-color-scheme` 和 `data-md-color-primary` */
-/* Material 主题会根据这两个属性来渲染页面，包括侧边栏。 */
-/* 如果你希望侧边栏不跟着变，意味着你需要： */
-/* A) 在 JS 中只在特定的容器上设置这些属性 (但这会破坏 Material 主题的全局响应) */
-/* B) 或者，用 CSS 专门覆盖侧边栏的样式，让它不响应全局的颜色变量。 */
-
-/* **让我们尝试方案 B：用 CSS 覆盖侧边栏的颜色，让它保持原样。** */
-
-/* 尝试保持侧边栏的默认浅色模式 */
-.md-sidebar {
-    /* 确保侧边栏背景是浅色的，忽略 body 的日夜间模式 */
-    background-color: var(--md-primary-bg-color, #ffffff) !important; /* 使用 Material 的默认浅色背景变量 */
-    color: var(--md-default-fg-color, #333) !important; /* 使用 Material 的默认浅色文字变量 */
+/* 如果你想提供一些全局的颜色变量作为 Material 主题的补充或替换： */
+/* 例如，你可以让你的链接颜色变量在 Material 主题的全局作用域内生效 */
+body {
+    /* 确保你的 JS 成功设置了 data-md-color-scheme 和 data-md-color-primary */
+    /* Material 主题会根据这些属性自动应用其 CSS */
+    /* 你的 CSS 可以进一步微调这些效果 */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 为 body 添加平滑过渡 */
 }
 
-/* 如果切换到深色模式，侧边栏也应该保持默认的浅色模式 */
-body[data-md-color-scheme="dark"] .md-sidebar {
-    background-color: var(--md-primary-bg-color, #ffffff) !important;
-    color: var(--md-default-fg-color, #333) !important;
+/* 侧边栏应该自动跟随 body 的颜色模式，不需要特别处理 .md-sidebar */
+/* 但是，我们可以确保侧边栏的某些元素能正确使用我们的变量（如果 Material 主题没有覆盖的话） */
+
+/* 示例：侧边栏链接颜色 (如果需要微调) */
+/* .md-sidebar .md-nav__link {
+    color: var(--md-default-fg-color);
+} */
+/* body[data-md-color-scheme="dark"] .md-sidebar .md-nav__link {
+    color: var(--md-default-fg-color);
+} */
+/* Material 主题通常已经处理好这些，所以一般不需要这里代码 */
+
+
+/* --- 主体模式样式 --- */
+/*
+   Material for MkDocs 会自动应用基于 data-md-color-scheme 的样式。
+   你的 JS 设置的 --primary-accent-color 会影响 Material 的主色调。
+   我们这里主要关注如何让 Material 的默认样式能正确响应，以及如何为你的切换按钮添加样式。
+*/
+
+/* 链接颜色，这些应该能被 body[data-md-color-scheme] 覆盖 */
+a {
+    color: var(--link-color-light); /* 默认浅色模式 */
+}
+body[data-md-color-scheme="dark"] a {
+    color: var(--link-color-dark); /* 深色模式 */
 }
 
-/* 如果你想让侧边栏不响应主色调 */
-.md-sidebar .md-nav__link--active {
-    /* 移除或重置使用主色调的样式 */
-    background-color: transparent !important; /* 确保非激活状态下没有背景色 */
-    color: inherit !important; /* 继承默认颜色 */
+/* 如果你想为 Material 主题的核心组件添加颜色，可以这样（不推荐过度覆盖） */
+/* .md-content {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
 }
-
-/* 针对侧边栏链接的样式，不随主色调变化 */
-.md-sidebar .md-nav__link {
-    color: var(--md-default-fg-color, #333) !important; /* 保持默认文字颜色 */
-}
-
-/* 链接悬停时，不使用主色调，而是使用 Material 的默认悬停色 */
-.md-sidebar .md-nav__link:hover {
-    color: var(--md-accent-fg-color, #007bff) !important; /* 使用 Material 的默认链接悬停色 */
-    background-color: transparent !important; /* 确保悬停时也没有背景色 */
-}
-
-/* --- 应用主题颜色到关键元素 (仅在主内容区域) --- */
-
-/* 链接颜色，仅在主内容区域生效 */
-/* 这里我们可以尝试仅在 .md-content 内部应用我们的颜色变量 */
-.md-content a {
-    color: var(--link-color-light);
-}
-body[data-md-color-scheme="dark"] .md-content a {
-    color: var(--link-color-dark);
-}
-
-/* 按钮样式，如果这些按钮在主内容区域，而不是侧边栏 */
-/* 假设你的切换按钮不是在侧边栏里 */
-.md-button, .button1 {
-    border-color: var(--primary-accent-color);
-    color: var(--primary-accent-color);
-}
-
-body[data-md-color-primary="white"] .md-button,
-body[data-md-color-primary="white"] .button1 {
-    color: var(--primary-accent-color);
-}
-
-.md-button {
-    background-color: var(--primary-accent-color);
-    color: var(--background-color-light); /* 浅色模式背景 */
-}
-body[data-md-color-scheme="dark"] .md-button {
-    color: var(--background-color-dark); /* 深色模式背景 */
-}
-body[data-md-color-primary="white"] .md-button {
-     background-color: var(--primary-accent-color);
-     color: #333; /* 深色文本 */
-}
+body[data-md-color-scheme="dark"] .md-content {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+} */
+/* 注意：Material 主题已经处理了 .md-content 的颜色，直接覆盖可能破坏其内部逻辑 */
 
 
 /* --- 主题切换和颜色选择按钮的样式 --- */
-/* 确保这些按钮不在侧边栏，并且样式不会影响侧边栏 */
 
 /* 为主题切换按钮 (data-md-color-scheme) 添加 active 样式 */
+/* 增大按钮使其更好选中 */
+button[data-md-color-scheme] {
+    padding: 8px 16px; /* 增加内边距 */
+    margin: 5px; /* 增加外边距 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent; /* 默认无边框 */
+    background-color: var(--md-primary-bg-color); /* 使用 Material 的背景色 */
+    color: var(--md-default-fg-color); /* 使用 Material 的默认文字色 */
+}
+
+/* active 状态的样式 */
 button[data-md-color-scheme].active {
     font-weight: bold;
-    border: 2px solid var(--primary-accent-color);
+    border-color: var(--primary-accent-color); /* 使用当前主色调作为边框 */
+    background-color: var(--md-primary-fg-color); /* 使用 Material 的主色背景 */
+    color: var(--md-primary-bg-color); /* 使用 Material 的主色文字 */
 }
+
+/* 当主题是深色时，按钮的默认样式可能需要调整 */
+body[data-md-color-scheme="dark"] button[data-md-color-scheme] {
+    background-color: var(--md-primary-bg-color); /* 保持 Material 的深色背景 */
+    color: var(--md-default-fg-color); /* 保持 Material 的深色文字 */
+}
+
+/* 当主题是深色且按钮 active 时 */
+body[data-md-color-scheme="dark"] button[data-md-color-scheme].active {
+    border-color: var(--primary-accent-color); /* 主色调边框 */
+    background-color: var(--md-primary-fg-color); /* Material 的深色主色背景 */
+    color: var(--md-primary-bg-color); /* Material 的深色主色文字 */
+}
+
 
 /* 为主色调选择按钮 (.button1) 添加 active 样式 */
 .tx-switch button.button1 {
     margin: 4px 2px;
     padding: 8px 12px;
     border-radius: 4px;
-    border: 1px solid transparent;
+    border: 1px solid transparent; /* 默认无边框 */
     cursor: pointer;
-    transition: all 0.3s ease, transform 0.2s ease;
-    background-color: var(--primary-accent-color);
-    color: #fff;
+    transition: all 0.3s ease, transform 0.2s ease; /* 添加过渡和变换效果 */
+    /* background-color: var(--primary-accent-color); */ /* Material 主题会根据 data-md-color-primary 设置 accent color */
+    /* color: #fff; */
 }
 
-body[data-md-color-primary="white"] .tx-switch button.button1 {
-    background-color: var(--primary-accent-color);
-    color: #333;
-    border: 1px solid #ccc;
-}
+
 
 .tx-switch button.button1.active {
     font-weight: bold;
-    border: 2px solid var(--primary-accent-color);
-    transform: scale(1.1);
+    border: 2px solid var(--primary-accent-color); /* 激活时加粗边框 */
+    transform: scale(1.1); /* 激活时稍微放大 */
 }
 
+/* 如果你想让 .button1 按钮本身的颜色显示出来（作为颜色的 swatch） */
+/* 这里假设你的 HTML 结构是这样的: <button class="button1" style="background-color: red;" data-md-color-primary="red">Red</button> */
 .tx-switch button.button1 {
-    padding: 5px;
-    line-height: 1;
+    padding: 5px; /* 减少 padding 以便更好的显示颜色 swatch */
+    line-height: 1; /* 消除默认行高影响 */
+    /* margin 保持不变 */
+    border: 1px solid var(--md-border-color); /* 使用 Material 的边框颜色 */
 }
-.tx-switch button.button1:not(.active) {
-    opacity: 0.7;
+.tx-switch button.button1:not(.active) { /* 非激活状态 */
+    opacity: 0.7; /* 半透明 */
+}
+
+/* 当主色为白色时，button1 的 border 和 color 可能需要调整 */
+body[data-md-color-primary="white"] .tx-switch button.button1 {
+    border: 1px solid #ccc; /* 浅灰色边框 */
+    background-color: var(--primary-accent-color); /* 使用主色调 */
+    color: #333; /* 深色文字 */
+}
+body[data-md-color-primary="white"] .tx-switch button.button1.active {
+    border-color: var(--primary-accent-color); /* 保持主色调边框 */
+    transform: scale(1.1);
 }
