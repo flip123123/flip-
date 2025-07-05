@@ -9,18 +9,17 @@ flip的小站
 - 喜欢deeptalk，喜欢约人出去吃饭聊天，也欢迎大家来找我约饭聊天
 
 
-以下是主题切换的界面：
+以下是主题切换的页面，请谨慎选择，因为你之后的阅读将会保持选择的样式：
 
----
 
-### 日间 / 夜间
+**日间 / 夜间**
 
 <div class="tx-switch">
   <button data-md-color-scheme="default"><code>default</code></button>
   <button data-md-color-scheme="slate"><code>slate</code></button>
 </div>
 
-### 主色
+**主色**
 
 <div class="tx-switch">
   <button class="button1" data-md-color-primary="red" style="background-color:red">red</button>
@@ -43,4 +42,4 @@ flip的小站
      所以这里不需要再写 <script> 和 <style> 标签了。
      原有的 script 代码现在在 extra.js 里运行，用于处理 localStorage 和 body 属性。 -->
 
----
+
