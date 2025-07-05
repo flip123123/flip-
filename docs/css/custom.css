@@ -64,3 +64,74 @@
    而是通过 CSS 变量或者其他方式，这里匹配可能不准确。
    不过在你提供的示例中是直接写了 style，所以这种方式是有效的。
 */
+
+@media screen and (min-width: 960px) {
+    html {
+      font-size: 137.5%;
+    }
+  }
+  
+  @media screen and (min-width: 100em) {
+    html {
+      font-size: 137.5%;
+    }
+  }
+  
+  @media screen and (min-width: 125em) {
+    html {
+      font-size: 137.5%;
+    }
+  }
+  
+  .md-typeset h1, .md-typeset h2 {
+    font-weight: 600;
+  }
+  
+  .md-typeset h3 {
+    font-weight: 500;
+  }
+  
+  .md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4 {
+    letter-spacing: 0;
+  }
+  
+  .md-typeset {
+    font-size: .7rem;
+  }
+  
+  .md-typeset h3 {
+    font-weight: 600;
+  }
+  
+  @media screen and (max-width: 59.9375em) {
+    .md-nav__source {
+      background-color: var(--md-primary-fg-color);
+    }
+  }
+  
+  @media screen and (max-width: 76.1875em) {
+    .md-nav--primary .md-nav__title {
+      background-color: var(--md-primary-fg-color);
+    }
+  }
+  /* 复制到此 */
+  
+  /* 修改所有代码字体大小 */
+  .md-typeset code {
+    font-size: .65rem;
+  }
+  
+  /* (覆盖)修改行内代码字体大小 */
+  .md-typeset code:not(pre code) {
+    font-size: inherit;
+  }
+  
+  /* 修改代码块行间距 */
+  .md-typeset pre {
+    line-height: 1.8;
+  }
+  
+  /* 修改分割线的宽度 */
+  .md-typeset hr {
+    border-bottom: .10rem solid var(--md-default-fg-color--lightest);
+  }
