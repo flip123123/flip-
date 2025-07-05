@@ -112,7 +112,7 @@ a.remark-container {
 /* 你的主色选择按钮 */
 .button1 {
     color: white;
-    padding: 1px 4px;
+    padding: 8px 12px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -134,3 +134,15 @@ a.remark-container {
    而是通过 CSS 变量或者其他方式，这里匹配可能不准确。
    不过在你提供的示例中是直接写了 style，所以这种方式是有效的。
 */
+/* 为日间/夜间切换按钮添加 active 样式 */
+.tx-switch button[data-md-color-scheme].active {
+    font-weight: bold;
+    border: 2px solid var(--md-primary-color); /* 使用主色调作为边框 */
+}
+
+/* 主色调切换按钮的 active 样式 */
+.tx-switch button.button1.active {
+    font-weight: bold;
+    border: 2px solid var(--md-primary-color); /* 使用主色调作为边框 */
+    transform: scale(1.1); /* 可以稍微放大一点 */
+}

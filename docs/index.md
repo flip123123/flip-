@@ -44,5 +44,3 @@ flip的小站
      原有的 script 代码现在在 extra.js 里运行，用于处理 localStorage 和 body 属性。 -->
 
 ---
-
-这是一个普通的段落。

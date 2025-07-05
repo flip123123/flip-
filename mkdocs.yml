@@ -67,4 +67,4 @@ extra_css:
   - css/custom.css
 
 extra_javascript:
-  - js/extrea.js
+  - js/extra.js
