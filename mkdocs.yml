@@ -1,5 +1,4 @@
 site_name: flip的小站
-
 nav:
   - 主页: index.md
   - 好用的网址: site.md
@@ -47,13 +46,13 @@ theme:
       primary: purple
 
 markdown_extensions:
+  - md_in_html
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
   - attr_list
-  - md_in_html
   - admonition
   - pymdownx.details
   - pymdownx.superfences
@@ -63,3 +62,7 @@ extra_javascript:
   - js/extra.js
 extra_css:
   - css/custom.css
+
+plugins:
+  - statistics
+  
