@@ -1,0 +1,66 @@
+/* docs/css/extra.css */
+.button1 {
+    color: white;
+    padding: 1px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 0px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* 如果你的主题默认的 button 样式和你想要的 .button1 冲突，
+   你可能需要调整 .button1 的选择器或者添加一些覆盖样式。
+   但通常 Material for MkDocs 的主题切换按钮不会用 .button1 这个类名，
+   它有自己的一套机制，所以你的 .button1 可能是用于你自定义的颜色选择器。
+*/
+/* 为了让你的示例中的按钮好看一点，可以加一些边距和轮廓 */
+.tx-switch button {
+    margin: 4px 2px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--md-default-color); /* 使用主题变量 */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.tx-switch button:hover {
+    opacity: 0.9;
+}
+.tx-switch button.active { /* 假设你可以为当前选中的添加一个 active 类 */
+    border-color: var(--md-primary-color);
+    font-weight: bold;
+}
+
+/* 如果你的主题使用 data-md-color-scheme 来设置主题，
+   那么你的 button 标签就是它内部的元素，不需要 extra.css 特别处理它们。 */
+/* 但是，如果你想让你的 `button1` 样式应用到这些切换主题的按钮上，
+   可以尝试这样： */
+
+
+/* 你的主色选择按钮 */
+.button1 {
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 0px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none; /* 移除默认边框，让背景色成为主要视觉 */
+}
+/* 特殊处理那些背景色浅的按钮，以便文本可见 */
+.button1[style*="background-color:pink"],
+.button1[style*="background-color:cyan"],
+.button1[style*="background-color:lime"],
+.button1[style*="background-color:orange"],
+.button1[style*="background-color:white"] {
+    color: black;
+}
+/* 这里有一个小问题，如果你的 style 属性不是直接写 background-color:red
+   而是通过 CSS 变量或者其他方式，这里匹配可能不准确。
+   不过在你提供的示例中是直接写了 style，所以这种方式是有效的。
+*/
