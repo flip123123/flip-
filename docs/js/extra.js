@@ -1,76 +1,112 @@
+javascript
 // docs/js/extra.js
 
 (() => {
-    // 1. 设置颜色方案 (日间/夜间)
-    var colorScheme = localStorage.getItem("data-md-color-scheme");
-    // 如果 localStorage 中没有，则尝试读取系统偏好或使用默认（如 slate）
-    // 注意：Material for MkDocs 可能会在加载时自动处理系统偏好。
-    // 你的 JS 代码是用来“维持”用户选择的。
-    if (colorScheme === null) {
-        // 尝试读取系统偏好 (可选，但更好)
-        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (prefersDarkMode) {
-            colorScheme = "dark"; // 或者其他你在 CSS 中定义的深色主题名
-        } else {
-            colorScheme = "default"; // 或者你的默认浅色主题名
-        }
-        localStorage.setItem("data-md-color-scheme", colorScheme);
+    // --- 配置 ---
+    // Material for MkDocs 使用的 localStorage 键名
+    const THEME_MODE_STORAGE_KEY = "data-md-color-scheme";
+    const PRIMARY_COLOR_STORAGE_KEY = "data-md-color-primary";
+
+    // 默认值
+    const DEFAULT_THEME_MODE = "default"; // Material for MkDocs 默认是 "default" 或你的自定义主题名
+    const DEFAULT_PRIMARY_COLOR = "blue"; // Material for MkDocs 的一个内置主色，你可以根据需要修改
+
+    // --- 函数：获取当前页面设置的属性值 ---
+    function getCurrentAttribute(attributeName) {
+        return document.body.getAttribute(attributeName);
     }
-    document.body.setAttribute('data-md-color-scheme', colorScheme);
+
+    // --- 函数：设置页面属性并更新 localStorage ---
+    function setPageAttribute(attributeName, value) {
+        document.body.setAttribute(attributeName, value);
+        localStorage.setItem(attributeName, value);
+    }
+
+    // --- 函数：更新切换按钮的 active 状态 ---
+    function updateButtonActiveState(buttons, activeValue, attributeName) {
+        buttons.forEach(btn => {
+            const btnValue = btn.getAttribute(attributeName);
+            if (btnValue === activeValue) {
+                btn.classList.add("active");
+            } else {
+                btn.classList.remove("active");
+            }
+        });
+    }
+
+    // --- 初始化 ---
+    // 1. 设置颜色方案 (日间/夜间)
+    let currentColorScheme = getCurrentAttribute(THEME_MODE_STORAGE_KEY);
+
+    if (!currentColorScheme) {
+        // 如果 body 上没有，尝试从 localStorage 读取
+        currentColorScheme = localStorage.getItem(THEME_MODE_STORAGE_KEY);
+        if (!currentColorScheme) {
+            // 如果 localStorage 中也没有，则读取系统偏好，并设置默认值
+            const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            currentColorScheme = prefersDarkMode ? "dark" : DEFAULT_THEME_MODE;
+            // 注意：Material for MkDocs 可能会自己处理系统偏好，这里是为了确保你的 JS 也同步。
+            // 如果 Material 主题已经设置了 body 的属性，这里获取到的就会是 Material 的值。
+            // 为保险起见，我们先确保 body 有个属性
+            document.body.setAttribute(THEME_MODE_STORAGE_KEY, currentColorScheme);
+            localStorage.setItem(THEME_MODE_STORAGE_KEY, currentColorScheme);
+        } else {
+            // 从 localStorage 读取到了值，但 body 上没有，就设置给 body
+            document.body.setAttribute(THEME_MODE_STORAGE_KEY, currentColorScheme);
+        }
+    } else {
+        // 如果 body 上有，确保 localStorage 和它同步
+        localStorage.setItem(THEME_MODE_STORAGE_KEY, currentColorScheme);
+    }
 
     // 2. 设置主色
-    var primaryColor = localStorage.getItem("data-md-color-primary");
-    if (primaryColor) {
-        document.body.setAttribute('data-md-color-primary', primaryColor);
-    }
-    // 如果没有 localStorage 记录，你也可以在这里设置一个默认的主色
-    // 例如：
-    // else {
-    //     document.body.setAttribute('data-md-color-primary', 'blue'); // 设置一个默认主色
-    // }
-
-    // 考虑你 CSS 中添加的 active 类，以高亮当前选中的按钮
-    // 注意：这个部分需要你的 HTML 结构和上面的 JS 配合。
-    // 当用户点击按钮时，JS 会在 localStorage 中设置，
-    // 而你的 HTML 部分可能需要一个方法来“找到”那个按钮并添加 active 类。
-    // 你的示例中没有展示如何更新 "active" 类，所以此处可以先不加，或者根据需要实现。
-
-    // 如果你想为日间/夜间主题也添加 active 状态：
-    const themeButtons = document.querySelectorAll("button[data-md-color-scheme]");
-    themeButtons.forEach(btn => {
-        if (btn.getAttribute("data-md-color-scheme") === colorScheme) {
-            btn.classList.add("active");
+    let currentPrimaryColor = getCurrentAttribute(PRIMARY_COLOR_STORAGE_KEY);
+    if (!currentPrimaryColor) {
+        currentPrimaryColor = localStorage.getItem(PRIMARY_COLOR_STORAGE_KEY);
+        if (!currentPrimaryColor) {
+            // 如果 localStorage 和 body 上都没有，就设置一个默认值
+            currentPrimaryColor = DEFAULT_PRIMARY_COLOR;
+            document.body.setAttribute(PRIMARY_COLOR_STORAGE_KEY, currentPrimaryColor);
+            localStorage.setItem(PRIMARY_COLOR_STORAGE_KEY, currentPrimaryColor);
         } else {
-            btn.classList.remove("active");
+            // 从 localStorage 读取到了值，但 body 上没有，就设置给 body
+            document.body.setAttribute(PRIMARY_COLOR_STORAGE_KEY, currentPrimaryColor);
         }
-        // 添加点击事件监听，当用户点击时，更新 body 的属性和 localStorage，并更新 active 类
-        btn.addEventListener("click", function() {
-            var newScheme = this.getAttribute("data-md-color-scheme");
-            document.body.setAttribute("data-md-color-scheme", newScheme);
-            localStorage.setItem("data-md-color-scheme", newScheme);
+    } else {
+        // 如果 body 上有，确保 localStorage 和它同步
+        localStorage.setItem(PRIMARY_COLOR_STORAGE_KEY, currentPrimaryColor);
+    }
 
-            // 更新其他按钮的 active 类
-            themeButtons.forEach(otherBtn => otherBtn.classList.remove("active"));
-            this.classList.add("active");
+
+    // --- 为主题切换按钮添加事件监听 ---
+    // 查找所有用于切换颜色方案的按钮 (通常是 Material for MkDocs 的配置按钮)
+    const themeModeButtons = document.querySelectorAll("button[data-md-color-scheme]");
+    if (themeModeButtons.length > 0) {
+        updateButtonActiveState(themeModeButtons, currentColorScheme, THEME_MODE_STORAGE_KEY);
+        themeModeButtons.forEach(btn => {
+            btn.addEventListener("click", function() {
+                const newScheme = this.getAttribute(THEME_MODE_STORAGE_KEY);
+                setPageAttribute(THEME_MODE_STORAGE_KEY, newScheme);
+                updateButtonActiveState(themeModeButtons, newScheme, THEME_MODE_STORAGE_KEY);
+            });
         });
-    });
+    }
 
-    // 为主色按钮添加 active 类处理
+    // --- 为主色切换按钮添加事件监听 ---
+    // 查找你的自定义主色选择按钮
+    // 注意：这里假设你的主色按钮的类名是 button1 并且有 data-md-color-primary 属性
+    // 如果 Material for MkDocs 主题本身有内置的颜色切换按钮，你需要找到它们的类名并适配
+    // 你的 CSS 中使用了 `.tx-switch button.button1`，所以我们以此为基础
     const primaryColorButtons = document.querySelectorAll(".tx-switch button.button1");
-    primaryColorButtons.forEach(btn => {
-        if (btn.getAttribute("data-md-color-primary") === primaryColor) {
-            btn.classList.add("active");
-        }
-        // 添加点击事件监听，当用户点击时，更新 body 的属性和 localStorage，并更新 active 类
-        btn.addEventListener("click", function() {
-            var newColor = this.getAttribute("data-md-color-primary");
-            document.body.setAttribute("data-md-color-primary", newColor);
-            localStorage.setItem("data-md-color-primary", newColor);
-
-            // 更新其他按钮的 active 类
-            primaryColorButtons.forEach(otherBtn => otherBtn.classList.remove("active"));
-            this.classList.add("active");
+    if (primaryColorButtons.length > 0) {
+        updateButtonActiveState(primaryColorButtons, currentPrimaryColor, PRIMARY_COLOR_STORAGE_KEY);
+        primaryColorButtons.forEach(btn => {
+            btn.addEventListener("click", function() {
+                const newColor = this.getAttribute(PRIMARY_COLOR_STORAGE_KEY);
+                setPageAttribute(PRIMARY_COLOR_STORAGE_KEY, newColor);
+                updateButtonActiveState(primaryColorButtons, newColor, PRIMARY_COLOR_STORAGE_KEY);
+            });
         });
-    });
+    }
 
-})()
+})(); // 立即执行函数结束
