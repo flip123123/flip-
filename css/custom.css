@@ -1,141 +1,66 @@
-/* --- Docs/CSS/extra.css --- */
-
-/* --- CSS 变量定义 --- */
-:root {
-    /* 统一的页面背景颜色（例如白色） */
-    --page-background-color: #f4f7f6; /* 你可以将其修改为纯白 #ffffff，或者你想要的任何统一背景色 */
-
-    /* 默认文本颜色 (与 page-background-color 形成对比) */
-    --text-color-default: #333; /* 浅色背景下的深色文字 */
-
-    /* 深色模式下的文本颜色 (与 page-background-color 形成对比) */
-    --text-color-dark-mode: #ecf0f1; /* 浅色背景下的浅色文字，反之亦然。如果背景是白色，这里就是黑色。 */
-
-    /* 统一的链接颜色，可以在深色模式下微调 */
-    --link-color: #007bff; /* 默认的链接颜色 */
-    --link-color-dark-mode: #03a9f4; /* 深色模式下的链接颜色 */
-
-    /* 主色调 */
-    --primary-accent-color: #3498db;
+/* docs/css/extra.css */
+.button1 {
+    color: white;
+    padding: 1px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 0px 2px;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
-/* --- 应用统一背景色到 body --- */
-body {
-    background-color: var(--page-background-color);
-    color: var(--text-color-default); /* 默认使用浅色模式下的文本颜色 */
-}
-
-/* --- 根据页面背景色，匹配侧边栏的背景和文字颜色 --- */
-/* 由于我们希望背景色统一，所以侧边栏背景色也使用统一的 --page-background-color */
-
-.md-sidebar {
-    background-color: var(--page-background-color) !important; /* 侧边栏背景与页面背景统一 */
-    color: var(--text-color-default) !important; /* 侧边栏文字使用默认文本颜色 */
-}
-
-/* **当 body 应用了深色模式属性时，只改变文字和链接颜色，背景保持统一** */
-body[data-md-color-scheme="dark"] {
-    color: var(--text-color-dark-mode) !important; /* 深色模式下，文字颜色变为深色模式的颜色 */
-}
-
-/* 深色模式下，侧边栏文字和链接颜色也相应改变 */
-body[data-md-color-scheme="dark"] .md-sidebar {
-    color: var(--text-color-dark-mode) !important; /* 侧边栏文字颜色在深色模式下反转 */
-}
-
-/* 侧边栏链接的颜色： */
-/* 默认浅色模式下，链接颜色使用默认链接变量 */
-.md-sidebar .md-nav__link {
-    color: var(--link-color) !important;
-}
-/* 深色模式下，链接颜色使用深色模式的链接变量 */
-body[data-md-color-scheme="dark"] .md-sidebar .md-nav__link {
-    color: var(--link-color-dark-mode) !important;
-}
-
-/* 激活状态的侧边栏链接： */
-/* 不影响背景，保持链接本身的颜色 */
-.md-sidebar .md-nav__link--active {
-    background-color: transparent !important; /* 确保没有激活背景色干扰 */
-    color: inherit !important; /* 继承侧边栏 link 的颜色 */
-}
-/* 深色模式下同样处理 */
-body[data-md-color-scheme="dark"] .md-sidebar .md-nav__link--active {
-    background-color: transparent !important;
-    color: inherit !important;
-}
-
-/* 侧边栏链接悬停状态： */
-/* 使用 Material 的默认悬停色，它应该与当前主题色一致 */
-.md-sidebar .md-nav__link:hover {
-    color: var(--md-accent-fg-color, var(--link-color)) !important; /* Fallback 到你的链接颜色 */
-    background-color: transparent !important;
-}
-body[data-md-color-scheme="dark"] .md-sidebar .md-nav__link:hover {
-    color: var(--md-accent-fg-color, var(--link-color-dark-mode)) !important; /* Fallback 到你的深色链接颜色 */
-    background-color: transparent !important;
-}
-
-
-/* --- 主题颜色应用到主内容区 --- */
-
-/* 链接颜色，仅在主内容区域生效 */
-.md-content a {
-    color: var(--link-color);
-}
-body[data-md-color-scheme="dark"] .md-content a {
-    color: var(--link-color-dark-mode);
-}
-
-/* 按钮样式 */
-/* 假设你想让按钮背景色始终是主色，文字颜色根据模式反转 */
-.md-button, .button1 {
-    border-color: var(--primary-accent-color);
-    background-color: var(--primary-accent-color); /* 按钮背景用主色 */
-    color: var(--text-color-default); /* 浅色模式下按钮文字用默认文本颜色 */
-}
-
-body[data-md-color-scheme="dark"] .md-button,
-body[data-md-color-scheme="dark"] .button1 {
-    color: var(--text-color-dark-mode); /* 深色模式下按钮文字反转 */
-}
-
-/* --- 主题切换和颜色选择按钮的样式 --- */
-/* 确保这些按钮不在侧边栏，并且样式不会影响侧边栏 */
-
-button[data-md-color-scheme].active {
-    font-weight: bold;
-    border: 2px solid var(--primary-accent-color);
-}
-
-.tx-switch button.button1 {
+/* 如果你的主题默认的 button 样式和你想要的 .button1 冲突，
+   你可能需要调整 .button1 的选择器或者添加一些覆盖样式。
+   但通常 Material for MkDocs 的主题切换按钮不会用 .button1 这个类名，
+   它有自己的一套机制，所以你的 .button1 可能是用于你自定义的颜色选择器。
+*/
+/* 为了让你的示例中的按钮好看一点，可以加一些边距和轮廓 */
+.tx-switch button {
     margin: 4px 2px;
     padding: 8px 12px;
     border-radius: 4px;
-    border: 1px solid transparent;
+    border: 1px solid var(--md-default-color); /* 使用主题变量 */
     cursor: pointer;
-    transition: all 0.3s ease, transform 0.2s ease;
-    background-color: var(--primary-accent-color);
-    color: var(--text-color-default); /* 按钮文字用默认文本颜色 */
+    transition: all 0.3s ease;
 }
-
-.tx-switch button.button1.active {
+.tx-switch button:hover {
+    opacity: 0.9;
+}
+.tx-switch button.active { /* 假设你可以为当前选中的添加一个 active 类 */
+    border-color: var(--md-primary-color);
     font-weight: bold;
-    border: 2px solid var(--primary-accent-color);
-    transform: scale(1.1);
 }
 
-.tx-switch button.button1:not(.active) {
-    opacity: 0.7;
-}
+/* 如果你的主题使用 data-md-color-scheme 来设置主题，
+   那么你的 button 标签就是它内部的元素，不需要 extra.css 特别处理它们。 */
+/* 但是，如果你想让你的 `button1` 样式应用到这些切换主题的按钮上，
+   可以尝试这样： */
 
-/* 如果 Material for MkDocs 的主题切换JS会给body添加data-md-color-primary属性，而你想让按钮颜色在白色主题下是其他颜色的话，这里可以添加 */
-/* 例如：如果你设置 data-md-color-primary="white" 时，希望按钮文字是深灰色 */
-body[data-md-color-primary="white"] .tx-switch button.button1 {
-    color: var(--text-color-default); /* 保持与默认模式一致 */
-}
 
-body[data-md-color-primary="white"] .md-button,
-body[data-md-color-primary="white"] .button1 {
-    color: var(--text-color-default); /* 保持与默认模式一致 */
+/* 你的主色选择按钮 */
+.button1 {
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 0px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none; /* 移除默认边框，让背景色成为主要视觉 */
 }
+/* 特殊处理那些背景色浅的按钮，以便文本可见 */
+.button1[style*="background-color:pink"],
+.button1[style*="background-color:cyan"],
+.button1[style*="background-color:lime"],
+.button1[style*="background-color:orange"],
+.button1[style*="background-color:white"] {
+    color: black;
+}
+/* 这里有一个小问题，如果你的 style 属性不是直接写 background-color:red
+   而是通过 CSS 变量或者其他方式，这里匹配可能不准确。
+   不过在你提供的示例中是直接写了 style，所以这种方式是有效的。
+*/
