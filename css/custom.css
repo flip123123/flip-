@@ -104,10 +104,7 @@ a.remark-container {
    那么你的 button 标签就是它内部的元素，不需要 extra.css 特别处理它们。 */
 /* 但是，如果你想让你的 `button1` 样式应用到这些切换主题的按钮上，
    可以尝试这样： */
-.tx-switch button[data-md-color-scheme] {
-   /* 继承一些 .button1 的样式，如果需要的话 */
-   /* 例如：font-size: 15px; */
-}
+
 
 /* 你的主色选择按钮 */
 .button1 {
