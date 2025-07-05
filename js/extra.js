@@ -1,4 +1,4 @@
-javascript
+
 // docs/js/extra.js
 
 (() => {
