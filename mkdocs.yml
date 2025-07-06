@@ -1,7 +1,7 @@
 site_name: flip的小站
 site_url: https://flip123123.github.io/flip-/
 nav:
-  - 主页: index.md
+  - flip的小站: index.md
   - 校内课程:
     - 形策一: school/xc/xc.md
     - 人工智能基础A: school/ai/ai.md
