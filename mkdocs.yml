@@ -1,25 +1,28 @@
 site_name: flip的小站
+site_url: https://flip123123.github.io/flip-/
 nav:
   - 主页: index.md
-  - 好用的网址: site.md
-  - 学习:
-    - 形策一: xc.md
-    - 人工智能基础A: ai/ai.md
-    - markdown: md.md
+  - 校内课程:
+    - 形策一: school/xc/xc.md
+    - 人工智能基础A: school/ai/ai.md
+  - 校外:
+    - markdown: learn/md.md
     - html语法: 
-      - 6.16: HTML/html1.md
-      - 6.17: HTML/html2.md
-      - 6.18: HTML/html3.md
-      - 6.22: HTML/html4.md
-      - 6.23: HTML/html5.md
-    - makefile: makefile.md
+      - 6.16: learn/HTML/html1.md
+      - 6.17: learn/HTML/html2.md
+      - 6.18: learn/HTML/html3.md
+      - 6.22: learn/HTML/html4.md
+      - 6.23: learm/HTML/html5.md
+    - makefile: learn/makefile.md
     - css:
-      - 6.25: css/css1.md
-      - 6.26: css/css2.md
-      - 6.27: css/css3.md
-      - 7.1: css/css4.md
-      - 7.3: css/css5.md
-      - 7.4: css/css6.md
+      - 6.25: learn/css/css1.md
+      - 6.26: learn/css/css2.md
+      - 6.27: learn/css/css3.md
+      - 7.1: learn/css/css4.md
+      - 7.3: learn/css/css5.md
+      - 7.4: learn/css/css6.md
+    - 开发者模式: learn/开发者模式.md
+  - 好用: site.md
   - 一些talks:
     - 乱七八糟: words/word1.md
     - 工高被刷: words/word2.md
@@ -63,7 +66,10 @@ markdown_extensions:
 extra_javascript:
   - js/extra.js
 extra_css:
-  - css/custom.css
+  - extra.css
 
 plugins:
   - statistics
+extra:
+  social:
+    github: flip123123/flip-
