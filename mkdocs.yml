@@ -31,6 +31,8 @@ nav:
     - 是非正缘: words/word5.md
 theme: 
     name: material
+    icon:
+      logo: material/feather
     features:
     - navigation.instant
     - navigation.instant.progress
@@ -47,7 +49,8 @@ theme:
     palette:
       scheme: slate
       primary: purple
-
+repo_url: https://github.com/flip123123/flip-
+repo_name: flip123123/flip-
 markdown_extensions:
   - md_in_html
   - pymdownx.highlight:
@@ -72,5 +75,5 @@ plugins:
   - statistics
 extra:
   social:
-    - icon: github  # 这里是 Material 主题支持的图标名称
-      link: https://github.com/flip123123/flip-
+    - icon: fontawesome/brands/github
+      link: https://github.com/Slowist-Lee/slowist-notebook
