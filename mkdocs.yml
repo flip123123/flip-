@@ -12,7 +12,7 @@ nav:
       - 6.17: learn/HTML/html2.md
       - 6.18: learn/HTML/html3.md
       - 6.22: learn/HTML/html4.md
-      - 6.23: learm/HTML/html5.md
+      - 6.23: learn/HTML/html5.md
     - makefile: learn/makefile.md
     - css:
       - 6.25: learn/css/css1.md
@@ -21,7 +21,7 @@ nav:
       - 7.1: learn/css/css4.md
       - 7.3: learn/css/css5.md
       - 7.4: learn/css/css6.md
-    - 开发者模式: learn/开发者模式.md
+    - 开发者模式: learn/开发者/开发者模式.md
   - 好用: site.md
   - 一些talks:
     - 乱七八糟: words/word1.md
