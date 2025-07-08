@@ -23,8 +23,9 @@ nav:
       - 7.4: learn/css/css6.md
     - 开发者模式: learn/开发者/开发者模式.md
     - solidworks: 
-      - 起始: learn/sw/sw.md
+      - 开始: learn/sw/sw.md
       - 草图: learn/sw/草图.md
+      - 特征: learn/sw/特征.md
   - 好用: site.md
   - 杂项: 搭建.md
   - 一些talks:
