@@ -8,24 +8,22 @@ nav:
   - 校外:
     - markdown: learn/md.md
     - html语法: 
-      - learn/HTML/6.16.md
-      - learn/HTML/6.17.md
-      - learn/HTML/6.18.md
-      - learn/HTML/6.22.md
-      - learn/HTML/6.23.md
-    - makefile:
-      - learn/makefile.md
+      - 6.16: learn/HTML/html1.md
+      - 6.17: learn/HTML/html2.md
+      - 6.18: learn/HTML/html3.md
+      - 6.22: learn/HTML/html4.md
+      - 6.23: learn/HTML/html5.md
+    - makefile: learn/makefile.md
     - css:
-      - learn/css/6.25.md
-      - learn/css/6.26.md
-      - learn/css/6.27.md
-      - learn/css/7.1.md
-      - learn/css/7.3.md
-      - learn/css/7.4.md
-    - 开发者模式: 
-      - learn/开发者/开发者模式.md
+      - 6.25: learn/css/css1.md
+      - 6.26: learn/css/css2.md
+      - 6.27: learn/css/css3.md
+      - 7.1: learn/css/css4.md
+      - 7.3: learn/css/css5.md
+      - 7.4: learn/css/css6.md
+    - 开发者模式: learn/开发者/开发者模式.md
     - solidworks: 
-      - 开始: learn/sw/开始.md
+      - 开始: learn/sw/sw.md
       - 草图: learn/sw/草图.md
       - 特征: learn/sw/特征.md
       - 装配: learn/sw/装配体.md
