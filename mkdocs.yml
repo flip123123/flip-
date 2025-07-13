@@ -45,15 +45,14 @@ theme:
     - navigation.instant.progress
     - navigation.tracking
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
     - navigation.path
     - navigation.top
     - navigation.footer
     - navigation.sections
-    - navigation.expand
     - search.suggest
-    - toc.integrate
     - search.highlight
     - content.code.copy
     - content.code.annotate
