@@ -14,8 +14,7 @@ nav:
       - learn/HTML/6.18.md
       - learn/HTML/6.22.md
       - learn/HTML/6.23.md
-    - makefile:
-      - learn/makefile.md
+    - makefile: learn/makefile.md
     - css:
       - learn/css/6.25.md
       - learn/css/6.26.md
@@ -23,8 +22,7 @@ nav:
       - learn/css/7.1.md
       - learn/css/7.3.md
       - learn/css/7.4.md
-    - 开发者模式: 
-      - learn/开发者/开发者模式.md
+    - 开发者模式: learn/开发者/开发者模式.md
     - solidworks: 
       - learn/sw/开始.md
       - learn/sw/草图.md
@@ -52,9 +50,13 @@ theme:
     - navigation.path
     - navigation.top
     - navigation.footer
+    - navigation.sections
+    - navigation.expand
     - search.suggest
+    - toc.integrate
     - search.highlight
     - content.code.copy
+    - content.code.annotate
     palette:
       scheme: slate
       primary: purple
