@@ -6,15 +6,15 @@ nav:
     - 形策一: school/xc/xc.md
     - 人工智能基础A: school/ai/ai.md
   - 校外:
-    - markdown: 
-      - learn/md.md
+    - markdown: learn/md.md
     - html语法: 
       - learn/HTML/6.16.md
       - learn/HTML/6.17.md
       - learn/HTML/6.18.md
       - learn/HTML/6.22.md
       - learn/HTML/6.23.md
-    - makefile: learn/makefile.md
+    - makefile:
+      - learn/makefile.md
     - css:
       - learn/css/6.25.md
       - learn/css/6.26.md
@@ -22,20 +22,21 @@ nav:
       - learn/css/7.1.md
       - learn/css/7.3.md
       - learn/css/7.4.md
-    - 开发者模式: learn/开发者/开发者模式.md
+    - 开发者模式: 
+      - learn/开发者/开发者模式.md
     - solidworks: 
-      - learn/sw/开始.md
-      - learn/sw/草图.md
-      - learn/sw/特征.md
-      - learn/sw/装配体.md
+      - 开始: learn/sw/开始.md
+      - 草图: learn/sw/草图.md
+      - 特征: learn/sw/特征.md
+      - 装配: learn/sw/装配体.md
   - 好用: site.md
   - 杂项: 搭建.md
   - 一些talks:
-    - words/乱七八糟.md
-    - words/工高被刷.md
-    - words/和gsy老师.md
-    - words/社团中心.md
-    - words/是非正缘.md
+    - 乱七八糟: words/word1.md
+    - 工高被刷: words/word2.md
+    - 和gsy老师: words/word3.md
+    - 社团中心: words/word4.md
+    - 是非正缘: words/word5.md
 theme: 
     name: material
     icon:
@@ -45,17 +46,14 @@ theme:
     - navigation.instant.progress
     - navigation.tracking
     - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
     - navigation.path
     - navigation.top
     - navigation.footer
-    - navigation.sections
     - search.suggest
     - search.highlight
     - content.code.copy
-    - content.code.annotate
     palette:
       scheme: slate
       primary: purple
