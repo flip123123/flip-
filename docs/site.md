@@ -2,12 +2,9 @@
 
 [zlib](https://intl.su/)
 
-[AI](https://share.xuzhugpt.cloud/list)
-邀请码是 chatgpt4o-mini-xuzhu  
-
-[也是AI](https://gptshare666.com)  
-
 [AskManyAI](https://askmany.cn/index)。我现在都在用这个基本
+
+[白嫖claude和grok](https://zchat.tech/) 这个是学长学姐自己搭的吧，而且白嫖爽
 
 [思政刷题器](https://study.zjueva.net/)  还没用过其实，等我大二感受一下
 
@@ -15,7 +12,7 @@
 
 [有趣的开源社区 - HelloGitHub](https://hellogithub.com/)，这个可以多逛逛
 
-听说浙大邮箱可以白嫖Gemini，详见https://www.cc98.org/topic/6210003这篇
+听说浙大邮箱可以白嫖Gemini，详见[这篇](https://www.cc98.org/topic/6210003)
 
 教程如下：
 
@@ -27,3 +24,5 @@
 6. 邀请男朋友一起用因为有宝申请起来太麻烦，教程说完了去学习了
 
 [学latex](https://www.cc98.org/topic/5931186/18#3)
+
+[Github学生认证](https://www.cc98.org/topic/6188896/1#1)，但是我好像没什么用，懒得搞

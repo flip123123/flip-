@@ -27,8 +27,10 @@ nav:
       - 草图: learn/sw/草图.md
       - 特征: learn/sw/特征.md
       - 装配: learn/sw/装配体.md
+      - 抽屉: lenrn/sw/抽屉.md
   - 好用: site.md
-  - 杂项: 搭建.md
+  - 杂项: 
+    - 搭建.md
   - 一些talks:
     - 乱七八糟: words/word1.md
     - 工高被刷: words/word2.md
@@ -41,12 +43,10 @@ theme:
       logo: material/feather
     features:
     - navigation.instant
-    - navigation.instant.progress
     - navigation.tracking
     - navigation.tabs
     - navigation.sections
     - navigation.indexes
-    - navigation.path
     - navigation.top
     - navigation.footer
     - search.suggest
