@@ -7,28 +7,29 @@ nav:
     - 人工智能基础A: school/ai/ai.md
   - 校外:
     - markdown: learn/md.md
-    - html语法: 
-      - 6.16: learn/HTML/html1.md
-      - 6.17: learn/HTML/html2.md
-      - 6.18: learn/HTML/html3.md
-      - 6.22: learn/HTML/html4.md
-      - 6.23: learn/HTML/html5.md
+    - 前端:
+      - html语法: 
+        - 6.16: learn/HTML/html1.md
+        - 6.17: learn/HTML/html2.md
+        - 6.18: learn/HTML/html3.md
+        - 6.22: learn/HTML/html4.md
+        - 6.23: learn/HTML/html5.md
+      - css:
+        - 6.25: learn/css/css1.md
+        - 6.26: learn/css/css2.md
+        - 6.27: learn/css/css3.md
+        - 7.1: learn/css/css4.md
+        - 7.3: learn/css/css5.md
+        - 7.4: learn/css/css6.md
+      - 开发者模式: learn/开发者/开发者模式.md
     - makefile: learn/makefile.md
-    - css:
-      - 6.25: learn/css/css1.md
-      - 6.26: learn/css/css2.md
-      - 6.27: learn/css/css3.md
-      - 7.1: learn/css/css4.md
-      - 7.3: learn/css/css5.md
-      - 7.4: learn/css/css6.md
-    - 开发者模式: learn/开发者/开发者模式.md
     - solidworks: 
       - 开始: learn/sw/sw.md
       - 草图: learn/sw/草图.md
       - 特征: learn/sw/特征.md
       - 装配: learn/sw/装配体.md
       - 抽屉: learn/sw/抽屉.md
-  - 好用: site.md
+  - 好用: good.md
   - 杂项: 
     - 搭建.md
   - 一些talks:

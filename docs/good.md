@@ -26,3 +26,5 @@
 [学latex](https://www.cc98.org/topic/5931186/18#3)
 
 [Github学生认证](https://www.cc98.org/topic/6188896/1#1)，但是我好像没什么用，懒得搞
+
+[Practice](https://github.com/aradzie/keybr.com)喜欢打字就去玩玩
