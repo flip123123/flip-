@@ -29,4 +29,4 @@
 
 [Practice](https://github.com/aradzie/keybr.com)喜欢打字就去玩玩
 
-读论文用(zotero)[https://www.cc98.org/topic/4969029/1]
+读论文用[zotero](https://www.cc98.org/topic/4969029/1)
