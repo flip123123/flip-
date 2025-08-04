@@ -35,8 +35,8 @@ nav:
         - 风扇摇头底座: learn/sw/风扇摇头底座设计.md
     -CS:
       -MIT-Missing-Semester:
-        - 课程概览与shell: 1.md
-        - shell工具与脚本: 2.md
+        - 课程概览与shell: learn/cs/1.md
+        - shell工具与脚本: learn/cs/2.md
   - 好用: good.md
   - 杂项: 
     - 杂项/搭建.md
