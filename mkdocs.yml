@@ -85,8 +85,8 @@ markdown_extensions:
 extra_javascript:
   - js/extra.js
 extra_css:
+  - https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.min.css
   - extra.css
-
 plugins:
   - statistics
 extra:
