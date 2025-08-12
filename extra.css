@@ -141,5 +141,5 @@ body {
     border-bottom: .10rem solid var(--md-default-fg-color--lightest);
   }
 
-  .MathJax { font-size: 1.5em !important; }
+  .MathJax { font-size: 1.25em !important; }
   .MathJax_Display, .MathJax_Display > div { font-size: 1.6em !important; }
