@@ -63,7 +63,13 @@ theme:
     - navigation.footer
     - search.suggest
     - search.highlight
+    - content.code.annotate
     - content.code.copy
+    - content.code.select
+    - content.action.view
+    - content.footnote.tooltips
+    - content.tabs.link
+    - header.autohide
     palette:
       scheme: slate
       primary: purple
@@ -73,8 +79,11 @@ markdown_extensions:
   - md_in_html
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.arithmatex
   - attr_list
   - admonition
   - pymdownx.details
@@ -83,15 +92,17 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
+  - pymdownx.arithmatex:
+      generic: true
 extra_javascript:
   - js/extra.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
 extra_css:
   - https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.min.css
   - extra.css
 plugins:
   - statistics
-extra:
+
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Slowist-Lee/slowist-notebook
