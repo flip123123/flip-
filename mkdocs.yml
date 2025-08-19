@@ -33,6 +33,7 @@ nav:
         - 工程图: learn/sw/工程图.md
         - 练习: learn/sw/练习.md
         - 风扇摇头底座: learn/sw/风扇摇头底座设计.md
+        - 海豚机械臂: learn/sw/机械臂.md
     - CS: 
       - MIT-Missing-Semester:
         - 课程概览与shell: learn/cs//MIT/1.md
