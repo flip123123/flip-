@@ -40,6 +40,9 @@ nav:
         - shell工具与脚本: learn/cs/MIT/2.md
         - to be continued: learn/cs/MIT/3.md
       - Ng-Machine learning : learn/cs/Ng/1.md
+      - wnc的任务: 
+        - ssh连接: learn/cs/wnc/ssh.md
+        - git&github: learn/cs/wnc/git&github.md
   - 好用: good.md
   - 杂项: 
     - 杂项/搭建.md
