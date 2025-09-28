@@ -3,10 +3,10 @@ site_url: https://flip123123.github.io/flip-/
 nav:
   - flip的小站: index.md
   - 校内课程:
-    大一:
+    - 大一:
       - 形策一: school/1/xc/xc.md
       - 人工智能基础A: school/1/ai/ai.md
-    大二:
+    - 大二:
       - 大物实验: school/2/experiment/ex.md
       - 现代管理基础: school/2/management/manage.md
       - 茶文化及茶健康: school/2/tea/tea.md
