@@ -9,7 +9,7 @@ nav:
     - 大二:
       - 大物实验: school/2/experiment/ex.md
       - 现代管理基础: school/2/management/manage.md
-      - 茶文化及茶健康: school/2/tea/tea.md
+      - 茶文化与茶健康: school/2/tea/tea.md
       - 概统: school/2/stat/stat.md
   - 校外:
     - markdown: learn/md.md
