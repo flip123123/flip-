@@ -11,6 +11,7 @@ nav:
       - 现代管理基础: school/2/management/manage.md
       - 茶文化与茶健康: school/2/tea/tea.md
       - 概统: school/2/stat/stat.md
+      - 工程材料: school/2/material/material.md
   - 校外:
     - markdown: learn/md.md
     - 前端:
