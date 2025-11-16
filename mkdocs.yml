@@ -6,12 +6,14 @@ nav:
     - 大一:
       - 形策一: school/1/xc/xc.md
       - 人工智能基础A: school/1/ai/ai.md
+      - 大学物理上: school/1/physical/physical.md
     - 大二:
       - 大物实验: school/2/experiment/ex.md
       - 现代管理基础: school/2/management/manage.md
       - 茶文化与茶健康: school/2/tea/tea.md
       - 概统: school/2/stat/stat.md
       - 工程材料: school/2/material/material.md
+      - 大学物理下: school/2/physical/physical.md
   - 校外:
     - markdown: learn/md.md
     - 前端:
@@ -50,7 +52,7 @@ nav:
       - wnc的任务: 
         - ssh连接: learn/cs/wnc/ssh.md
         - git&github: learn/cs/wnc/git&github.md
-  - 好用: good.md
+  - 好用: good/good.md
   - 杂项: 
     - 杂项/搭建.md
     - 杂项/抢票.md
