@@ -2,13 +2,7 @@
 
 [zlib](https://intl.su/)
 
-[AskManyAI](https://askmany.cn/index)。我现在都在用这个基本
-
-[白嫖claude和grok](https://zchat.tech/) 这个是学长学姐自己搭的吧，而且白嫖爽
-
-[思政刷题器](https://study.zjueva.net/)  还没用过其实，等我大二感受一下
-
-[大英默写器](https://eng.zjueva.net/)，赫赫在我大英两门都学完了之后找到了
+[ZCHAT](https://zchat.tech/) 白嫖爽
 
 [有趣的开源社区 - HelloGitHub](https://hellogithub.com/)，这个可以多逛逛
 
@@ -26,8 +20,6 @@
 [学latex](https://www.cc98.org/topic/5931186/18#3)
 
 [Github学生认证](https://www.cc98.org/topic/6188896/1#1)，但是我好像没什么用，懒得搞
-
-[Practice](https://github.com/aradzie/keybr.com)喜欢打字就去玩玩
 
 读论文用[zotero](https://www.cc98.org/topic/4969029/1)
 
