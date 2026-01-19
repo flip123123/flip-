@@ -14,6 +14,9 @@ nav:
       - 概统: school/2/stat/stat.md
       - 工程材料: school/2/material/material.md
       - 大学物理下: school/2/physical/physical.md
+      - 马原: school/2/marx/marx.md
+      - 设计与制造I: school/2/design and manufacturing/dam.md
+      - 理论力学: school/2/theoretical mechanics/theoretical mechanics.md
   - 校外:
     - markdown: learn/md.md
     - 前端:
