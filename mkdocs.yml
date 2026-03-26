@@ -62,9 +62,9 @@ nav:
         - origin: learn/lab/origin.md
   - 好用: good/good.md
   - 杂项: 
-    - 杂项/搭建.md
-    - 杂项/抢票.md
-    - 杂项/打卡/打卡.md
+    - 搭建: 杂项/搭建.md
+    - 抢票: 杂项/抢票.md
+    - 打卡: 杂项/打卡/打卡.md
   - 一些talks:
     - 乱七八糟: words/word1.md
     - 工高被刷: words/word2.md
