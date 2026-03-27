@@ -58,7 +58,7 @@ nav:
       - wnc的任务: 
         - ssh连接: learn/cs/wnc/ssh.md
         - git&github: learn/cs/wnc/git&github.md
-     - 实验室:
+      - 实验室:
         - origin: learn/lab/origin.md
   - 好用: good/good.md
   - 杂项: 
